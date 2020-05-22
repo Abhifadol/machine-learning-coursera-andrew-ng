@@ -19,9 +19,9 @@ Linear Regression
 
 	figure; % open a new figure window
 
-  plot(x, y, 'rx', 'MarkerSize', 10); % Plot the data
-  ylabel('Profit in $10,000s'); % Set the y􀀀axis label
-  xlabel('Population of City in 10,000s'); % Set the x􀀀axis label
+        plot(x, y, 'rx', 'MarkerSize', 10); % Plot the data
+        ylabel('Profit in $10,000s'); % Set the y􀀀axis label
+        xlabel('Population of City in 10,000s'); % Set the x􀀀axis label
 
 ### Gradient Descent ###
 
@@ -48,9 +48,9 @@ My solution uses `sum` which sum up each column and `.^` which is power by eleme
 My solution uses two transpose `'` to perform matrix product:
 
 	theta_0 = theta(1) - alpha / m * sum(X * theta - y);
-    theta_1 = theta(2) - alpha / m * sum((X * theta - y) .* X(:, 2));
+        theta_1 = theta(2) - alpha / m * sum((X * theta - y) .* X(:, 2));
 
-    theta = [theta_0; theta_1]
+        theta = [theta_0; theta_1]
 
 ### Visualizing \\( J(\theta) \\) ###
 
@@ -78,15 +78,15 @@ compute the standard deviation.
 My solution uses `repmat` to duplicate `mu` and `sigma` to fit the size of `X`:
 
 	mu = mean(X)
-  sigma = std(X)
+       sigma = std(X)
 
-  for iter = 1:size(X, 2)
-    X_norm(:,iter) = (X(:,iter) - mu(iter)) / sigma(iter);
-  end
+       for iter = 1:size(X, 2)
+         X_norm(:,iter) = (X(:,iter) - mu(iter)) / sigma(iter);
+       end
 
 ### Feature Normalization in `computeCostMulti.m` ###
 
- J = 1 / (2 * m) * sum(((X * theta) - y).^2);
+     J = 1 / (2 * m) * sum(((X * theta) - y).^2);
  
 ### Feature Normalization in `gradientDescentMulti.m` ###
  
