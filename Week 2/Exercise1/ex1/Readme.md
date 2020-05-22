@@ -9,13 +9,13 @@ Linear Regression
 
 ## 2. Linear regression with one variable ##
 
-### Loading the Data ###
+### Loading the Data `plotData.m` ###
 
 	data = load('ex1data1.txt'); 		% read comma separated data
 	X = data(:, 1); y = data(:, 2);
 	m = length(y);						% number of training examples
 
-### Plotting the Data in `plotData.m` ###
+### Plotting the Data in ###
 
 	figure; % open a new figure window
 
